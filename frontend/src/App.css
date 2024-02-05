@@ -1,0 +1,177 @@
+.App {
+    background-color: #272936;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+/* header styling */
+
+#header {
+    background-color: #21222d;
+}
+  
+
+/* the send message button */
+  
+.btn {
+  background: #5E5DF0;
+  border-radius: 999px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  opacity: 1;
+  outline: 0 solid transparent;
+  padding: 8px 18px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: fit-content;
+  word-break: break-word;
+  border: 0;
+}
+
+/* the username form on the header*/
+
+.form__group {
+    position: relative;
+    padding: 15px 0 0;
+    margin-top: 10px;
+    width: 50%;
+  }
+  
+  .form__field {
+    font-family: inherit;
+    width: 100%;
+    border: 0;
+    border-bottom: 2px solid gray;
+    outline: 0;
+    font-size: 1rem;
+    color: white;
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2s;
+  
+    &::placeholder {
+      color: transparent;
+    }
+  
+    &:placeholder-shown ~ .form__label {
+      font-size: 1rem;
+      cursor: text;
+      top: 20px;
+    }
+  }
+  
+  .form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 0.8rem;
+    color: gray;
+  }
+  
+  .form__field:focus {
+    ~ .form__label {
+      position: absolute;
+      top: 0;
+      display: block;
+      transition: 0.2s;
+      font-size: 1rem;
+      color: #5E5DF0;
+      font-weight:500;    
+    }
+  
+    padding-bottom: 6px;  
+    font-weight: 300;
+    border-width: 3px;
+    border-image: linear-gradient(to right, #5E5DF0, #5e5ef9);
+    border-image-slice: 1;
+  }
+  
+  .form__field:required,
+  .form__field:invalid {
+    box-shadow: none;
+  }
+
+
+  /* user image on header */
+
+  #imageContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+}
+
+#userImage {
+    width: 70px;
+    height: 70px;
+  }
+
+
+/* message writing and sending area at the bottom */
+
+#footer {
+    position: absolute;
+    bottom: 10px;
+    width: 80%;
+    align-items: center;
+}
+
+#textBox {
+    width: 70%;
+}
+
+
+/* the chat list appears here */
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 200px);
+    overflow-y: scroll;
+  }
+  
+  .chat-messages-container {
+    flex: 1;
+    overflow-y: scroll;
+  }
+  
+  .list-group-flush {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 10px;
+  }
+  
+  .chat-message {
+    display: flex;
+    margin-bottom: 10px;
+  }
+  
+  .message-content {
+    display: flex;
+    flex-direction: column;
+    background-color: #5e5ef9;
+    padding: 10px;
+    border-radius: 20px;
+    max-width: 70%;
+  }
+  
+  .username {
+    color: white;
+    margin-bottom: 5px;
+  }
+  
+  .message-text {
+    color: white;
+    font-size: 14px;
+  }
